@@ -1,0 +1,23 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "title": {
+    "text":"India GDP Growth",
+    "subtitle": ["QoQ4 % Growth", "Source: ONS via ECO-API"]
+  },
+
+  "width": 700,
+  "height": 500,
+
+  "data": {"url": "https://api.economicsobservatory.com/ind/grow?vega"},
+
+  "mark": {
+    "type": "line",
+    "color": "brown"
+  },
+
+  "encoding": {
+    "x": {"field": "date", "type": "temporal"},
+    "y": {"field": "value", "type": "quantitative", "title":null}
+  }
+}
